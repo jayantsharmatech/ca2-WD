@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name - Student Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- COMMON NAVIGATION BAR - FLOAT LAYOUT -->
+    <nav class="navbar clearfix">
+        <div class="logo">Jayant Sharma</div>
+        <nav>
+            <ul>
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </nav>
+
+    <!-- HOME PAGE -->
+    <div id="home" class="container">
+        <h1>Welcome to My Portfolio</h1>
+        <p><strong>Jayant Sharma</strong></p>
+        <p>First-year CSE-AIML Student at KIET Ghaziabad from Ghaziabad, UP.</p>
+        <p>Passionate about competitive programming on Codeforces/CodeChef, IoT projects with ESP boards, and web development.</p>
+        <p>Currently learning Data Structures & Algorithms while exploring Blockchain and AI technologies.</p>
+    </div>
+
+    <!-- ABOUT PAGE - FLOAT IMAGE LAYOUT -->
+    <div id="about" class="container">
+        <h1>About Me</h1>
+        <div class="about-content">
+            <img src="My photo pro.jpg" alt="Profile Photo" class="about-img">
+            <div class="about-text">
+                <p><strong>Jayant Sharma</strong><br>First-year CSE-AIML Student at KIET Ghaziabad.</p>
+                <p>From Ghaziabad, UP. Actively competing on Codeforces and CodeChef platforms.</p>
+                <p>Building IoT projects using ESP boards, sensors, and Blynk integration.</p>
+                <p>Participated in K3 X CodeHurdle contest and KWala Hacker House. NSS volunteer.</p>
+                <p>Exploring Web Development (HTML/CSS), Data Structures, Algorithms, and Blockchain technology.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- SKILLS PAGE - FLEXBOX CARDS -->
+    <div id="skills" class="container">
+        <h1>Skills & Projects</h1>
+        <div class="skills-container">
+            <div class="skill-card">
+                <h3>C Programming</h3>
+                <p>Arrays, matrices, sorting algorithms (bubble, selection, insertion), recursion, competitive programming on CodeChef/Codeforces.</p>
+            </div>
+            <div class="skill-card">
+                <h3>IoT Projects</h3>
+                <p>ESP boards with sensors, Blynk IoT integration, Arduino IDE, real-time monitoring systems.</p>
+            </div>
+            <div class="skill-card">
+                <h3>Web Development</h3>
+                <p>HTML5, CSS3 (Flexbox, Float layouts), responsive design, portfolio websites, basic JavaScript.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- CONTACT PAGE - HTML FORM -->
+    <div id="contact" class="container">
+        <h1>Contact Me</h1>
+        <p style="text-align: center; margin-bottom: 30px; color: #666;">
+            Get in touch for collaborations, projects, or opportunities
+        </p>
+        <form action="#" method="post">
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="subject">Subject:</label>
+            <input type="text" id="subject" name="subject" required>
+            
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required placeholder="Tell me about your project or collaboration idea..."></textarea>
+            
+            <button type="submit">Send Message</button>
+        </form>
+    </div>
+
+    <script>
+        // Smooth scroll for navigation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                target.scrollIntoView({ behavior: 'smooth' });
+                
+                // Update active nav link
+                document.querySelectorAll('.navbar a').forEach(link => link.classList.remove('active'));
+                this.classList.add('active');
+            });
+        });
+    </script>
+</body>
+</html>
